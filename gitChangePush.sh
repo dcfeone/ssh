@@ -20,11 +20,11 @@ if [[ ! -z "$(git diff-index --name-only HEAD)" ]]; then
 	# fi
 fi
 
-for pid in $(pgrep -f  /opt/4T/natapp/bin/natapp); do
-  if ! test $(mullvad split-tunnel list | grep $pid ) ; then
-    mullvad split-tunnel add $pid ;
-    echo add $pid to mullvad split-tunnel list ;
-  else
-    echo $pid exist in mullvad split-tunnel list;
-  fi 
-done
+# for pid in $(pgrep -f  /opt/4T/natapp/bin/natapp); do
+#   if ! test $(mullvad split-tunnel list | grep $pid ) ; then
+#     mullvad split-tunnel add $pid ;
+#     echo add $pid to mullvad split-tunnel list ;
+#   else
+#     echo $pid exist in mullvad split-tunnel list;
+#   fi 
+# done
